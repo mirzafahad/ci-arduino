@@ -13,19 +13,6 @@ export MAIN_PLATFORMS='declare -A main_platforms=( [uno]="arduino:avr:uno" [zero
 
 # associative array for other platforms that can be called explicitly in .travis.yml configs
 # this will be eval'd in the functions below because arrays can't be exported
-export AUX_PLATFORMS='declare -A aux_platforms=( [trinket]="adafruit:avr:trinket5" [gemma]="arduino:avr:gemma" )'
-
-export CPLAY_PLATFORMS='declare -A cplay_platforms=( [cplayClassic]="arduino:avr:circuitplay32u4cat" [cplayExpress]="arduino:samd:adafruit_circuitplayground_m0" [cplayExpressAda]="adafruit:samd:adafruit_circuitplayground_m0" [cplayBluefruit]="adafruit:nrf52:cplaynrf52840:softdevice=s140v6,debug=l0" )'
-
-export SAMD_PLATFORMS='declare -A samd_platforms=( [zero]="arduino:samd:arduino_zero_native", [cplayExpress]="arduino:samd:adafruit_circuitplayground_m0", [m4]="adafruit:samd:adafruit_metro_m4:speed=120" )'
-
-export M4_PLATFORMS='declare -A m4_platforms=( [m4]="adafruit:samd:adafruit_metro_m4:speed=120", [trellis_m4]="adafruit:samd:adafruit_trellis_m4:speed=120", [grand_central_m4]="adafruit:samd:adafruit_grand_central_m4:speed=120" )'
-
-export ARCADA_PLATFORMS='declare -A arcada_platforms=( [pybadge]="adafruit:samd:adafruit_pybadge_m4:speed=120", [pygamer]="adafruit:samd:adafruit_pygamer_m4:speed=120", [hallowing_m4]="adafruit:samd:adafruit_hallowing_m4:speed=120", [cplayExpressAda]="adafruit:samd:adafruit_circuitplayground_m0" )'
-
-export IO_PLATFORMS='declare -A io_platforms=( [zero]="arduino:samd:arduino_zero_native", [m4wifi]="adafruit:samd:adafruit_metro_m4_airliftlite:speed=120", [esp8266]="esp8266:esp8266:huzzah:eesz=4M3M,xtal=80" [esp32]="esp32:esp32:featheresp32:FlashFreq=80" )'
-
-export NRF5X_PLATFORMS='declare -A nrf5x_platforms=( [nrf52840]="adafruit:nrf52:feather52840:softdevice=s140v6,debug=l0")'
 
 # make display available for arduino CLI
 /sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_1.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :1 -ac -screen 0 1280x1024x16
