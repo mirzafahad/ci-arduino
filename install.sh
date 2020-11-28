@@ -164,6 +164,7 @@ function build_platform()
   if [[ ${main_platforms[$platform_key]} ]]; then
     if [[${platform_key} == 'uno'] || [${platform_key} == 'mega2560']]; then
       platform=${main_platforms[$platform_key]}
+	fi
   else
     echo "NON-STANDARD PLATFORM KEY: $platform_key"
     platform=$platform_key
